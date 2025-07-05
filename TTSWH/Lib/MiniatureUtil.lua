@@ -4,4 +4,7 @@ function MiniatureUtil.printTest()
     print("MiniatureUtil library loaded!")
 end
 
-return MiniatureUtil
+function MiniatureUtil.getManagerSingleton()
+    getObjectFromGUID("93d8fc")
+    return MiniatureUtil
+end

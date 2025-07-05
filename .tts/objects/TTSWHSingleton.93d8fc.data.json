@@ -1,0 +1,45 @@
+{
+  "GUID": "93d8fc",
+  "Name": "BlockSquare",
+  "Transform": {
+    "posX": -16.8426685,
+    "posY": 1.45999932,
+    "posZ": 2.251753,
+    "rotX": -0.0000152999673,
+    "rotY": 0.0000808060358,
+    "rotZ": -0.0000366002569,
+    "scaleX": 1,
+    "scaleY": 1,
+    "scaleZ": 1
+  },
+  "Nickname": "TTSWHSingleton",
+  "Description": "",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ColorDiffuse": {
+    "r": 0.9264706,
+    "g": 0,
+    "b": 0
+  },
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": false,
+  "Grid": true,
+  "Snap": true,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": false,
+  "Hands": false,
+  "LuaScript": "function showAttackUI(params)\r\n    local ui_xml = [[\r\n        <Panel id=\"viewportPanel\" \r\n               width=\"200\" height=\"100\" \r\n               color=\"#FFFFFF\" \r\n               rectAlignment=\"UpperCenter\" \r\n               position=\"0 -50\" \r\n               borderColor=\"#FFFFFF\" \r\n               borderThickness=\"5\"\r\n               allowDragging=\"true\">\r\n        </Panel>\r\n    ]]\r\n    self.UI.setXml(ui_xml)\r\n    self.UI.show(\"White\") -- Show the UI for the White player\r\nend",
+  "LuaScriptState": "",
+  "XmlUI": ""
+}

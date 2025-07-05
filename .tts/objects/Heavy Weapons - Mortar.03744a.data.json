@@ -1,0 +1,327 @@
+{
+  "GUID": "03744a",
+  "Name": "Custom_Model",
+  "Transform": {
+    "posX": 1.605209,
+    "posY": 0.959999144,
+    "posZ": -2.86790442,
+    "rotX": 0.00001245017,
+    "rotY": 209.995132,
+    "rotZ": -4.273586e-8,
+    "scaleX": 1,
+    "scaleY": 1,
+    "scaleZ": 1
+  },
+  "Nickname": "Heavy Weapons - Mortar",
+  "Description": "M 6\"\nWS 4+\nBS 4+\nS 3\nT 3\nW 2\nA 2\nLd 6\nSave 5+",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ColorDiffuse": {
+    "r": 0.9999998,
+    "g": 0.992160261,
+    "b": 0.9999998
+  },
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": false,
+  "Grid": true,
+  "Snap": false,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": false,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": false,
+  "Hands": false,
+  "CustomMesh": {
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205481653523/C9D90449C01DCAA4E6B20E6278543D3B406D7D4B/",
+    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2521527737902878618/6C8B4CD826C3C47EE79226456C467F5A719747E9/",
+    "NormalURL": "",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1476570921183859828/2F4C3FDE994882435A6F37D1AE11CBDA63A9CB24/",
+    "Convex": true,
+    "MaterialIndex": 0,
+    "TypeIndex": 0,
+    "CustomShader": {
+      "SpecularColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "SpecularIntensity": 0,
+      "SpecularSharpness": 7,
+      "FresnelStrength": 0.4
+    },
+    "CastShadows": true
+  },
+  "LuaScript": "local MiniatureUtil = require(\"lib.MiniatureUtil\")\r\nlocal manager = getObjectFromGUID(\"93d8fc\")\r\n\r\nif manager == nil then\r\n    print(\"Error: Manager object not found. Ensure the GUID is correct.\")\r\n    return\r\nend\r\n\r\nfunction onObjectHover(player_color, object)\r\n    if object ~= self then return end -- Ensure the hover is on this object\r\n    local target = object and object.guid or \"Nothing\"\r\n    print(player_color .. \" hovered over \" .. target)\r\nend\r\n\r\nfunction onLoad()\r\n   self.addContextMenuItem(\"Attack\", onAttack, false)\r\nend\r\n\r\nfunction onAttack()\r\n    print(\"onAttack called\")\r\n    Global.call(\"showGlobalUI\", {player_color = \"Red\"})\r\n\r\n    end",
+  "LuaScriptState": "",
+  "XmlUI": "",
+  "States": {
+    "1": {
+      "GUID": "77d9f5",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -96.8499451,
+        "posY": 1.61021221,
+        "posZ": -21.4500217,
+        "rotX": 359.9747,
+        "rotY": 209.983124,
+        "rotZ": 0.077619426,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Heavy Weapons - Autocannon",
+      "Description": "M 6\"\nWS 4+\nBS 4+\nS 3\nT 3\nW 2\nA 2\nLd 6\nSave 5+",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColorDiffuse": {
+        "r": 0.9999998,
+        "g": 0.992160261,
+        "b": 0.9999998
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": true,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": false,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205481648283/D8CFD5450911BC836D6234740BED570C6A92E7E3/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205476955412/6C8B4CD826C3C47EE79226456C467F5A719747E9/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1476570921183859828/2F4C3FDE994882435A6F37D1AE11CBDA63A9CB24/",
+        "Convex": true,
+        "MaterialIndex": 0,
+        "TypeIndex": 0,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "SpecularIntensity": 0,
+          "SpecularSharpness": 7,
+          "FresnelStrength": 0.4
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    "2": {
+      "GUID": "50a26b",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -102.050034,
+        "posY": 1.61746192,
+        "posZ": -21.449995,
+        "rotX": 359.97467,
+        "rotY": 210.003128,
+        "rotZ": 0.07760403,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Heavy Weapons - Heavy Bolter",
+      "Description": "M 6\"\nWS 4+\nBS 4+\nS 3\nT 3\nW 2\nA 2\nLd 6\nSave 5+",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColorDiffuse": {
+        "r": 0.9999998,
+        "g": 0.992160261,
+        "b": 0.9999998
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": true,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": false,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205481649579/D228D5AA04DEE41E3847B23B40AF650690E4149A/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205476955412/6C8B4CD826C3C47EE79226456C467F5A719747E9/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1476570921183859828/2F4C3FDE994882435A6F37D1AE11CBDA63A9CB24/",
+        "Convex": true,
+        "MaterialIndex": 0,
+        "TypeIndex": 0,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "SpecularIntensity": 0,
+          "SpecularSharpness": 7,
+          "FresnelStrength": 0.4
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    "3": {
+      "GUID": "63cbd0",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -99.4500351,
+        "posY": 1.61383712,
+        "posZ": -21.449995,
+        "rotX": 359.97467,
+        "rotY": 209.999939,
+        "rotZ": 0.07761608,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Heavy Weapons - Lascannon",
+      "Description": "M 6\"\nWS 4+\nBS 4+\nS 3\nT 3\nW 2\nA 2\nLd 6\nSave 5+",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColorDiffuse": {
+        "r": 0.9999998,
+        "g": 0.992160261,
+        "b": 0.9999998
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": true,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": false,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205481650623/58BE3FE62AFC623C007C04641D64350515B82FA1/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205476955412/6C8B4CD826C3C47EE79226456C467F5A719747E9/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1476570921183859828/2F4C3FDE994882435A6F37D1AE11CBDA63A9CB24/",
+        "Convex": true,
+        "MaterialIndex": 0,
+        "TypeIndex": 0,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "SpecularIntensity": 0,
+          "SpecularSharpness": 7,
+          "FresnelStrength": 0.4
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    "5": {
+      "GUID": "d335e7",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -94.2500458,
+        "posY": 1.60658753,
+        "posZ": -21.45,
+        "rotX": 359.97467,
+        "rotY": 209.994675,
+        "rotZ": 0.07761297,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Heavy Weapons - Missile Launcher",
+      "Description": "M 6\"\nWS 4+\nBS 4+\nS 3\nT 3\nW 2\nA 2\nLd 6\nSave 5+",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColorDiffuse": {
+        "r": 0.9999998,
+        "g": 0.992160261,
+        "b": 0.9999998
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": true,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": false,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/5862072205481651895/DF4FC210A941AA99AD709F62BA276CF0FAF2613C/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2521527737902878618/6C8B4CD826C3C47EE79226456C467F5A719747E9/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1476570921183859828/2F4C3FDE994882435A6F37D1AE11CBDA63A9CB24/",
+        "Convex": true,
+        "MaterialIndex": 0,
+        "TypeIndex": 0,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "SpecularIntensity": 0,
+          "SpecularSharpness": 7,
+          "FresnelStrength": 0.4
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    }
+  }
+}
